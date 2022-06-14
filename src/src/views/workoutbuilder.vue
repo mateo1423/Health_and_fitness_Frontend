@@ -112,12 +112,13 @@
 </template>
 <script>
 import store from "@/store";
-
+/* import { Auth } from '@/services' */
 export default {
     name:"workoutbuilder",
     data() {
     return{ 
-      store
+      store,
+      /* Auth.getUser().username */
       };
        
   },
@@ -125,22 +126,11 @@ export default {
     
  methods: {
    build_workout(){
-    
+     
 console.log("hello",store.workout_type,store.muscle_groups,store.workout_dificulty ) 
-
-
-
-fetch(`http://localhost:3000/Vjezbe/${this.store.muscle_groups[0]}?exercize_type=${this.store.workout_type}&exerciye_dificulty=${this.store.workout_dificulty}`)
- .then(Response => {
- return Response.json()
- })
- .then(data => {
- console.log("Podaci s backenda", data)
- })
-   }
    },
- }
-
+ },
+}
 
 </script>
 <style  scoped>

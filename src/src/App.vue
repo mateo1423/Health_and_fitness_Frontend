@@ -17,27 +17,6 @@
   </div>
 </template>
 
-<script>
-import {Auth} from '@/services'
-export default{
-  data() {
-    return{
-      auth: Auth.state,
-    };
-  },
-  name: "App.vue",
-    components: {
-    },
-    methods: {
-      logout(){
-        Auth.logout();
-        this.$router.go();
-    },
-  },
-};
-</script>
-
-
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

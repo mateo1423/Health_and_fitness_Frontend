@@ -78,7 +78,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const javneStranice = ["/login_reg","/registracija", "/","/pregled", "/pregled/avggrade"]
+  const javneStranice = ["/login_reg","/registracija", "/","/home", "/bedtime"]
   const loginPotreban = !javneStranice.includes(to.path)
   const user = Auth.getUser()
 
